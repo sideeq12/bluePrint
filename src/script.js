@@ -9,7 +9,8 @@ const mesh = new THREE.BoxGeometry(1,1,1)
 const material = new THREE.MeshBasicMaterial({color : "orange"})
 const cube = new THREE.Mesh(mesh, material)
 
-cube.position.set(0.7, -0.6, -1)
+cube.position.set(0.7, 1, 0)
+cube.rotation.set(1,1,1)
 scene.add(cube)
 
 
@@ -39,11 +40,16 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.render(scene, camera)
 
-// cube.rotation.x = 0.9
-// console.log(cube.rotation)
+// our time elapse
+const clock = new  THREE.Clock()
+
 const tick =()=>{
-    console.log("tick")
-    cube.position.x +=0.4
-    // window.requestAnimationFrame(tick)
+    const elapsedTime = clock.getElapsedTime()
+    cube.rotation.y = Math.sin(elapsedTime)
+    cube.position.y = Math.sin(elapsedTime)
+    // camera.lookAt(mesh.position)
+    renderer.render(scene, camera)
+
+    window.requestAnimationFrame(tick)
 }
 tick()
