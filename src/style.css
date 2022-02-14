@@ -6,3 +6,30 @@
 .webgl{
     outline: none;
 }
+span{
+    margin-top: 45vh;
+    margin-left: 30vw;
+    position: absolute;
+    display: flex;
+    gap:2rem;
+    width: fit-content;
+}
+span button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+span button:hover{
+    cursor: pointer;
+}
+#button1{
+    color : orangered;
+    border: 2px solid orangered;;
+    background-color: rgba(102, 51, 153, 0);
+}
+#button2{
+    color : white;
+    border : none;
+    background: orangered;
+}
