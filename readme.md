@@ -1,3 +1,3 @@
-# VIrtual Reality marketPLace project
+# VIrtual Reality space
 
 ```
